@@ -14,7 +14,8 @@ library(plotly)
 
 df<-fread("csv/nea_smrs2.csv", header = TRUE)%>%select(-TITLE, -DESCRIPTION)%>%
 pivot_longer(cols = c(7:35), names_to = "SCOPE", values_to = "FLAG")%>%
-  mutate(FLAG=toupper(FLAG))%>%
+  mutate(FLAG=toupper(FLAG),
+         SMR_FLAG=as.factor(SMR_FLAG))%>%
   filter(FLAG=="YES")%>%
   select(-FLAG)
 
@@ -23,9 +24,9 @@ pivot_longer(cols = c(7:35), names_to = "SCOPE", values_to = "FLAG")%>%
 
 # Histograms
 
-```{r histo, echo=FALSE, fig.width=10, fight.height=60}
-g<-ggplot(df, aes(y=SMR_FLAG, fill=SCOPE)) +
-  geom_bar(position = "dodge") +
+```{r histo, echo=FALSE, fig.width=10, fight.height=70}
+g<-ggplot(df, aes(y=SMR_FLAG,  fill=SCOPE)) +
+  geom_bar(stat='count', position = "dodge") +
   theme(legend.position = "top") +
   theme_light() +
   facet_wrap(vars(DIV)) +
@@ -34,9 +35,9 @@ g<-ggplot(df, aes(y=SMR_FLAG, fill=SCOPE)) +
   ggtitle("Deliverables per scope and division")
   #coord_flip()
 
-g
+#g
 
-#ggplotly(g)
+ggplotly(g)
  
 
 ```
