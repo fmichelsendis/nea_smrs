@@ -1,0 +1,53 @@
+ID;COOLANT;"Primary coolant flow rate
+[kg/s]";"Reactor operating pressure
+[MPa]";"Coolant inlet temperature
+[°C]";COOLANT_OUTLET_T_C;"Delta temperature
+[°C]"
+4S;Sodium;152;0.2;355;510;155
+AHWR;Light Water;2145;7;259.5;285;25.5
+ALFRED;Lead;-;0.1;400;480;80
+ALLEGRO;Helium;-;-;260;530;270
+ASTRID;Sodium;-;0.3;-;475;475
+BREST-OD-300;Lead;-;0.02;420;540;120
+BWRX-300;Light Water;1530;7.2;270;287;17
+CFR-600;Sodium;-;0.054;380;550;170
+CLEAR-I;Lead Bismuth Eutectic alloy;-;0.05;260;390;130
+ELECTRA;Lead;-;-;400;500;100
+ELFR;Lead;-;0.1;400;480;80
+EM2;Helium;320;13;550;850;300
+FBNR;Light Water;1060;16;290;326;36
+FBR-1 & 2;Sodium;-;0.11;397;547;150
+G4M;Lead Bismuth Eutectic alloy;-;-;-;500;500
+HAPPY200;Light Water;1293;0.6;80;120;40
+HTR-PM;Helium;96;7;250;750;500
+IMR;Light Water;3120;15.51;303;345;42
+IMSR-400;Fluoride Salts;5400;0.4;625;670;75
+IPHWR-220;Heavy Water;2210;8.53;249;293.4;44.4
+KLT-40S;Light Water;761;12.7;280;316;36
+LFR-AS-200;Lead;29300;0.01;420;530;110
+LFTR;Fluoride Salts;-;0.1;500;650;150
+MBIR;Sodium;-;0.6;330;512;182
+Mk1 PB-FHR;Fluoride Salts;976;0.3;600;700;100
+MoveluX;Sodium;-;0.1;680;685;5
+MSR-FUJI;Fluoride Salts;2400;0.5;565;704;139
+MSTW;Molten Salt;-;0.1;600;700;100
+MYRRHA;Lead Bismuth Eutectic alloy;-;-;270;410;140
+NuScale;Light Water;666;13.8;265;321;56
+NUWARD;Light Water;3700;15;280;307;27
+PBMR;Helium;96;6;250;750;500
+PEACER;Lead Bismuth Eutectic alloy;-;0.1;300;400;100
+PGSFR;Sodium;-;0.1;390;545;155
+PRISM;Sodium;-;-;-;485;485
+Prismatic HTR;Helium;157.1;6.39;322;750;428
+SC-HTGR;Helium;-;6;325;750;425
+SEALER;Lead;7400;0.1;420;550;130
+SmAHTR;Fluoride Salts;-;1;670;700;30
+SMART;Light Water;2090;15;295.7;323;27.3
+SVBR-100;Lead Bismuth Eutectic alloy;-;6.7;-;490;490
+ThorCon;Molten Salt;2934;0.39;565;704;139
+TWR-P;Sodium;-;0.1;360;500;140
+UK-SMR;Light Water;-;15.5;296;327;31
+VBER-300;Light Water;4483;16.3;292;327.5;35.5
+VVER-600 (V-498);Light Water;13861;16.2;299;325;26
+VVER-640 (V-407);Light Water;14945;15.7;294.3;322.7;28.4
+W-LFR;Lead;25300;0.1;390;650;260

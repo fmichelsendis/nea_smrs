@@ -1,0 +1,72 @@
+---
+title: "SMRs"
+output: html_document
+---
+
+ 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE,warning = FALSE, error = FALSE)
+library(DT)
+library(data.table)
+library(tidyverse)
+library(shiny) 
+library(stringr)
+library(plotly)
+library(ggplot2)
+library(shinydashboard)
+library(shinythemes)
+library(shinyjs)  
+library(splitstackshape)
+library(devtools)
+library(lubridate)
+library(wordcloud)
+library(wordcloud2)
+library("tm")
+library("SnowballC")
+library("wordcloud")
+library("RColorBrewer")
+library(igraph)
+library(networkD3)
+library(kableExtra)
+library(DT)
+
+dfa<-fread("csv/SMRs_ARIS_a.csv", header = TRUE)
+dfb<-fread("csv/SMRs_ARIS_b.csv", header = TRUE)
+dfc<-fread("csv/SMRs_ARIS_c.csv", header = TRUE)
+
+df<-merge(dfa, dfb)%>%
+  merge(dfc, by = c('ID', 'COOLANT'))%>%
+  select(-"Power plant output,net\n[MWe]", -"Plant efficiency, net\n[%]",
+         -"Thermodynamic cycle",-"Non-electrical applications",
+         -"Primary coolant flow rate\n[kg/s]",-"Delta temperature\n[°C]")
+
+
+
+
+```
+
+
+## Table
+
+```{r  table}
+
+DT::datatable(df)
+
+```
+
+
+## Plots
+ 
+```{r  plot}
+
+
+g<-ggplot(df, aes(x=POWER_E, y=COOLANT_OUTLET_T_C, color=COOLANT)) +  
+  geom_point(aes(shape=SPECTRUM))+
+  facet_wrap(~COUNTRY)+
+  theme_light()  
+
+ggplotly(g)
+```
+
+
+ 

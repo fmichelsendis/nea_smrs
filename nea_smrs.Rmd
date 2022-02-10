@@ -1,0 +1,56 @@
+---
+title: "Overview of SMR related activities" 
+#author: F. Michel-Sendis
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(data.table)
+library(DT)
+library(plotly)
+
+df<-fread("csv/nea_smrs2.csv", header = TRUE)%>%select(-TITLE, -DESCRIPTION)%>%
+pivot_longer(cols = c(7:35), names_to = "SCOPE", values_to = "FLAG")%>%
+  mutate(FLAG=toupper(FLAG))%>%
+  filter(FLAG=="YES")%>%
+  select(-FLAG)
+
+
+```
+
+# Histograms
+
+```{r histo, echo=FALSE, fig.width=10, fight.height=60}
+g<-ggplot(df, aes(y=SMR_FLAG, fill=SCOPE)) +
+  geom_bar(position = "dodge") +
+  theme(legend.position = "top") +
+  theme_light() +
+  facet_wrap(vars(DIV)) +
+  xlab("")+
+  ylab("")+
+  ggtitle("Deliverables per scope and division")
+  #coord_flip()
+
+g
+
+#ggplotly(g)
+ 
+
+```
+
+ 
+
+
+# Table
+
+```{r data, echo=FALSE}
+
+
+DT::datatable(df)
+
+```
+
+

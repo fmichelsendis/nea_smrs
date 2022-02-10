@@ -1,0 +1,49 @@
+ID;NAME;DESIGNER;COOLANT;MOD ;STATUS;COUNTRY;TYPE;PURPOSE
+4S;super-safe, small and simple;Toshiba Energy Systems & Solutions Corp.;Sodium;No Moderator;Detailed Design;Japan;SFR;Commercial
+AHWR;Advanced Heavy Water Reactor;BARC;Light Water;Heavy Water;Under Design;India;HWR;Commerical
+ALFRED;Advanced Lead Fast Reactor European Demonstrator;Ansaldo Nucleare;Lead;No Moderator;Under Design;EU;LFR;Demonstration
+ALLEGRO;ALLEGRO;EURATOM;Helium;No Moderator;Under Design;EU;GFR;Demonstration
+ASTRID;Advanced Sodium Technological Reactor for Industrial Demonstration;CEA;Sodium;No Moderator;Under Design;France;SFR;Demonstration
+BREST-OD-300;BREST-OD-300;RDIPE;Lead;No Moderator;Under Design;Russia;LFR;Demonstration
+BWRX-300;Boiling Water Reactor X-300;GE-Hitachi and Hitachi GE Nuclear Energy;Light Water;Light Water;Conceptual Design;USA;BWR;Commercial
+CFR-600;China Fast Reactor 600;China Institute of Atomic Energy;Sodium;No Moderator;Conceptual Design;China;SFR;Demonstration
+CLEAR-I;China LEAd-based Research Reactor;Institute of Nuclear Energy Safety Technology, Chinese Academy of Sciences;Lead Bismuth Eutectic alloy;No Moderator;Conceptual Design;China;LFR;Experimental
+ELECTRA;European Lead Cooled Training Reactor;KTH;Lead;No Moderator;Under Design;Sweden;LFR;Experimental
+ELFR;European Lead Fast Reactor;Ansaldo Nucleare;Lead;No Moderator;Conceptual Design;EU;LFR;Demonstration
+EM2;Energy Multiplier Module;General Atomics;Helium;No Moderator;Conceptual Design;USA;GFR;Commercial
+FBNR;Fixed Bed Nuclear Reactor;FURGS;Light Water;Light Water;Under Design;Brazil;PWR;Commerical
+FBR-1 & 2;Fast Breeder Reactors 1 & 2;IGCAR;Sodium;No Moderator;Under Design;India;SFR;Commerical
+G4M;Gen4 Module;Gen4 Energy Inc.;Lead Bismuth Eutectic alloy;No Moderator;Under Design;USA;LFR;Commerical
+HAPPY200;Advanced low-Pressurized and Passive SafetY system – 200 MWth;SPIC;Light Water;Light Water;Detailed Design;China;PWR;Commercial
+HTR-PM;High Temperature GCR - Pebble-Bed Module;Tsinghua University;Helium;Graphite;Construction;China;GCR;Demonstration
+IMR;Integrated Modular Water Reactor;Mitsubishi;Light Water;Light Water;Under Design;Japan;iPWR;Commerical
+IMSR-400;Integral Molten Salt Reactor-400;Terrestrial Energy;Fluoride Salts;Graphite;Under Design;Canada;MSR;Commerical
+IPHWR-220;Indian 220 MWe PHWR;NPCIL;Heavy Water;Heavy Water;In Operation;India;HWR;Commerical
+KLT-40S;KLT-40S;OKBM;Light Water;Light Water;Construction;Russia;PWR;Commerical
+LFR-AS-200;Lead-cooled Fast Reactor Amphora-Shaped 200;Hydromine Energy S.a.r.l;Lead;No moderator;Conceptual Design;Luxembourg;LFR;Commercial
+LFTR;Liquid Fluoride Thorium Reactor;Flibe Energy;Fluoride Salts;Graphite;Conceptual Design;USA;MSR;Commerical
+MBIR;Multipurpose fast-neutron research reactor;NIKIET;Sodium;No Moderator;Under Design;Russia;SFR;Experimental
+Mk1 PB-FHR;Mark 1 Pebble-Bed Fluoride-Salt-Cooled High Temperature Reactor;University of California, Berkeley;Fluoride Salts;Graphite;Under Design;USA;MSR;Commerical
+MoveluX;Mobile-Very-small reactor for Local Utility in X-mark;Toshiba Energy Systems & Solutions;Sodium;Calcium hydride (CaH2);Conceptual Design;Japan;SMR (micro);Commercial
+MSR-FUJI;Molten Salt Reactor-FUJI;International Thorium Molten-Salt Forum: ITMSF;Fluoride Salts;Graphite;Conceptual Design;Japan;MSR;Commerical
+MSTW;Molten Salt Thermal Wasteburner;Seaborg Technologies;Molten Salt;Graphite;Conceptual Design;Denmark;MSR;Commerical
+MYRRHA;Multi-purpose hYbrid Research Reactor for High-tech Applications;Belgian Nuclear Research Centre (SCK•CEN);Lead Bismuth Eutectic alloy;No Moderator;Under Design;Belgium;LFR;Experimental
+NuScale;NuScale SMR;NuScale Power Inc.;Light Water;Light Water;Under Regulatory Review;USA;iPWR;Commerical
+NUWARD;NUWARD;CEA EDF Naval Group and Technicatome;Light Water;Light Water;Conceptual Design;France;PWR;Commercial
+PBMR;Pebble Bed Modular Reactor;Pebble Bed Modular Reactor (Pty) Limited;Helium;Graphite;On Hold;South Africa;GCR;Commerical
+PEACER;Proliferation-resistant Environment-friendly Accident-tolerant Continuable and Economical Reactor;Seoul National University;Lead Bismuth Eutectic alloy;No Moderator;Conceptual Design;Rep. of Korea;LFR;Demonstration
+PGSFR;Prototype Gen-IV Sodium-cooled Fast Reactor;KAERI;Sodium;No Moderator;Conceptual Design;Rep. of Korea;SFR;Demonstration
+PRISM;Power Reactor Innovative Small Reactor;GE-Hitachi;Sodium;No Moderator;Under Design;USA;SFR;Commerical
+Prismatic HTR;Prismatic Modular High Temperature GCR;General Atomics;Helium;Graphite;Under Design;USA;GCR;Commerical
+SC-HTGR;Steam Cycle High Temperature Gas-cooled Reactor;Framatome;Helium;Graphite;Conceptual Design;USA;GCR;Commercial
+SEALER;Swedish Advanced Lead Reactor;LeadCold;Lead;No Moderator;Conceptual Design;Sweden;LFR;Commercial
+SmAHTR;Small fluoride salt-cooled High Temperature Reactor;Oak Ridge National Laboratory;Fluoride Salts;Graphite;Under Design;USA;MSR;Demonstration
+SMART;System-Integrated Modular Advanced Reactor;KAERI;Light Water;Light Water;Licensed;Rep. of Korea;iPWR;Commerical
+SVBR-100;SVBR-100;AKME Engineering;Lead Bismuth Eutectic alloy;No Moderator;Under Design;Russia;LFR;Commerical
+ThorCon;ThorCon;ThorCon US, Inc.;Molten Salt;Graphite;Detailed Design;USA;MSR;Commercial
+TWR-P;Travelling Wave Reactor-Prototype;TerraPower;Sodium;No Moderator;Under Design;USA;SFR;Commerical
+UK-SMR;UK Small Modular Reactor;Rolls Royce & Partners;Light Water;Light Water;Conceptual Design;UK;PWR;Commercial
+VBER-300;VBER-300;OKBM;Light Water;Light Water;Under Design;Russia;PWR;Commerical
+VVER-600 (V-498);VVER-600 (V-498);Gidropress;Light Water;Light Water;Under Design;Russia;PWR;Commerical
+VVER-640 (V-407);VVER-640 (V-407);Gidropress;Light Water;Light Water;Under Design;Russia;PWR;Commerical
+W-LFR;Westinghouse Lead-cooled Fast Reactor;Westinghouse Electric Company LLC;Lead;No Moderator;Conceptual Design;USA;LFR;Demonstration
