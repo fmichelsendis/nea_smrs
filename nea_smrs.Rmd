@@ -43,8 +43,10 @@ Ncommittees<-as.integer(dim(as.data.frame(unique(df1$COMMITTEE)))[1])
 
 Total number of projects : `r Nproject` SMR related projects found on `r Ncommittees` committees.
 
+Specific projects related to SMRS are found in 6 committees :
 
 ```{r histo1, echo=FALSE, fig.width=10, fight.height=70}
+library(packcircles)
 
 #df11<-fread("csv/df1.csv")
 g<-ggplot(df1, aes(y=SMR, fill=SMR)) +
@@ -57,8 +59,33 @@ g<-ggplot(df1, aes(y=SMR, fill=SMR)) +
   ylab("") 
  
 
-g
+
+df_b<-df1%>%select(KEY, SMR, COMMITTEE)%>%
+  group_by(COMMITTEE, SMR)%>%
+  count(COMMITTEE, SMR)
+
+df_b_s<-df_b%>%filter(SMR=='Specific')
+df_b_r<-df_b%>%filter(SMR=='Relevant')
+
+packing <- circleProgressiveLayout(df_b_s$n, sizetype='area')
+dat.gg <- circleLayoutVertices(packing, npoints=50)
+
+
+data<-cbind(df_b_s, packing)
+
+g<-ggplot(df_b_s, aes(y=SMR, fill=SMR)) +
+  geom_polygon()
  
+# Make the plot
+g<-ggplot() + 
+  geom_polygon(data = dat.gg, aes(x, y, group = id, fill=as.factor(id)), colour = "black", alpha = 0.6) +
+  geom_text(data = data, aes(x, y, label = COMMITTEE)) +
+  scale_size_continuous(range = c(1,4)) +
+  theme_void() + 
+  theme(legend.position="none") +
+  coord_equal()
+
+g
 
 ```
 
