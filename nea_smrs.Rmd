@@ -43,6 +43,7 @@ Ncommittees<-as.integer(dim(as.data.frame(unique(df1$COMMITTEE)))[1])
 
 Total number of projects : `r Nproject` projects on `r Ncommittees` committees.
 
+
 ```{r histo1, echo=FALSE, fig.width=10, fight.height=70}
 
 #df11<-fread("csv/df1.csv")
@@ -67,11 +68,10 @@ ggplotly(g)
 g<-ggplot(df2, aes(y=SMR,  fill=TOPIC)) +
   geom_bar(stat='count', position = "dodge") +
   theme(legend.position = "top") +
-  theme_light() +
+  theme_light() + 
   facet_wrap(vars(COMMITTEE)) +
   xlab("")+
-  ylab("") 
-
+  ylab("")  
 
 ggplotly(g)
  
