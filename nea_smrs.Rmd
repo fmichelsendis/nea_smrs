@@ -41,7 +41,7 @@ Ncommittees<-as.integer(dim(as.data.frame(unique(df1$COMMITTEE)))[1])
 
 # SMR projects per committee
 
-Total number of projects : `r Nproject` projects on `r Ncommittees` committees.
+Total number of projects : `r Nproject` SMR related projects found on `r Ncommittees` committees.
 
 
 ```{r histo1, echo=FALSE, fig.width=10, fight.height=70}
@@ -51,12 +51,13 @@ g<-ggplot(df1, aes(y=SMR, fill=SMR)) +
   geom_bar(stat='count', position = "dodge") +
   theme(legend.position = "top") +
   theme_light() +
+  theme(legend.position = "none") +
   facet_wrap(vars(COMMITTEE)) +
   xlab("")+
   ylab("") 
  
 
-ggplotly(g)
+g
  
 
 ```
