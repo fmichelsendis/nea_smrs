@@ -1,0 +1,104 @@
+KEY,PROJECT,SMR,COMMITTEE,FLAG
+1,Multi-sector Workshop on Innovative Regulation on 14-18 December 2020: Challenges and Benefits of Harmonising the Licensing Process for Emerging Technologies,Relevant,CNRA,YES
+2,CNRA Areas of Focus for SMRs support: Strategic review under discussion including new reactors,Specific,CNRA,YES
+3,"CNRA Areas of Focus for SMRs support: Creation of a Working Group on New Technologies. To be responsible for the PoW to the Committee on Nuclear Regulatory Activities (CNRA) regarding regulatory activities in the area of advanced reactors (including small modular reactors and Generation IV reactors), associated installations and application of innovative technologies, and to provide regulatory perspectives and influence through the issue of technical reports in areas where additional or revised regulatory frameworks, licensing approaches, regulatory standards or research,  may be needed to support new technologies",Specific,CNRA,YES
+4,"CSNI Areas of Focus for SMRs support: REPORT on CSNI activities of relevance to SMRs with identification of past CSNI reports that are fully applicable to SMRs and prioritized ranking of the safety knowledge gaps and recommendations to address the gaps, with a focus on safety issues that cross a number of designs.",Specific,CSNI,YES
+5,"CSNI Areas of Focus for SMRs support: REPORT on CSNI activities of relevance to SMRs with identification of past CSNI reports that are fully applicable to SMRs and prioritized ranking of the safety knowledge gaps and recommendations to address the gaps, with a focus on safety issues that cross a number of designs: A CSNI “booklet” on Safety of SMRs.",Specific,CSNI,YES
+6,CSNI WGFS activities of potential interest for SMRs,Relevant,CSNI,YES
+7,"CSNI WGAMA activities of potential interest for SMRs. *REPORT: Status report on thermal-hydraulic passive systems design and safety assessment, volume 1",Relevant,CSNI,YES
+8,CSNI WGAMA activities of potential interest for SMRs. REPORT: Topical Opinion Paper: Topical Opinion Paper on the Use of CFD for Nuclear Safety,Relevant,CSNI,YES
+9,"CSNI WGAMA activities of potential interest for SMRs. REPORT: Status Report on Good Practices for Analyses of Design Extension Condition without Significant Fuel Degradation (DEC-A), with WGFS",Relevant,CSNI,YES
+10,CSNI WGAMA activities of potential interest for SMRs. REPORT: CFD for Nuclear Reactor Safety Phase 6 – Supporting an enlarged use,Relevant,CSNI,YES
+11,"CSNI WGAMA activities of potential interest for SMRs. BENCHMARK: Final Report on the PERSEO benchmark exercise, volume 2",Relevant,CSNI,YES
+12,CSNI WGAMA activities of potential interest for SMRs. BENCHMARK: ISP on advanced core cooling mechanism experiments (ACME),Relevant,CSNI,YES
+13,CSNI WGAMA activities of potential interest for SMRs. BENCHMARK: Application Tests for Realisation of Inverse Uncertainty quantification and validation Methodologies in thermal-hydraulics (ATRIUM),Relevant,CSNI,YES
+14,CSNI WGAMA activities of potential interest for SMRs. WORKSHOP: WS on research needs to ensure core and containment cooling reliability in the long-term,Relevant,CSNI,YES
+15,CSNI WGAMA activities of potential interest for SMRs. WORKSHOP: Specialist Meeting on Transient Thermal Hydraulics in Water cooled reactors,Relevant,CSNI,YES
+16,CSNI WGAMA activities of potential interest for SMRs. CONFERENCE: Collaboration with ERMSAR2022 (European Review Meeting on Severe Accident Research),Relevant,CSNI,YES
+17,CSNI WGAMA activities of potential interest for SMRs. WORKSHOP: Reactor core and containment cooling systems: Long-term management and reliability (RCCS-2021).,Relevant,CSNI,YES
+18,"CSNI WGRISK activities of potential interest for SMRs: Report “Site-Level (Including Multi-Unit) PSA”, NEA/CSNI/R(2019)16",Relevant,CSNI,YES
+19,"CSNI WGRISK activities of potential interest for SMRs: Report “Site-Level (Including Multi-Unit) PSA”, NEA/CSNI/R(2019)16: Joint NEA and IAEA International Symposium on PSA for Reactors of Singular Designs – hosted by Office for Nuclear Regulation (ONR) in Liverpool (UK) on 23-25 February 2022",Relevant,CSNI,YES
+20,"CSNI WGEV activities of potential interest for SMRs: WGEV Workshop on High Winds and Tornadoes – Hazard Assessment and Protection of Nuclear Installations in collaboration with the Korea Atomic Energy Research Institute (KAERI) - Daejeon, South Korea in March 2022",Relevant,CSNI,YES
+21,CSNI WGEV activities of potential interest for SMRs: WGEV Workshop on Sources of Uncertainties in the Assessment of Natural Hazards in May 2022,Relevant,CSNI,YES
+22,Joint project activities of potential interest for SMRs: FIRE Project: Potential activity to investigate if there are any specific aspects concerning fire protection and regulation that needs to be considered when SMRs and metal cooled reactors are in operation,Specific,CSNI,YES
+23,Joint project activities of potential interest for SMRs: PANDA new Project: experiments in the PSI PANDA facility addressing complex safety issues for current water reactors and small modular reactors,Specific,CSNI,YES
+24,International Workshop on the Implementation of Radioactive Waste Management Strategies in Small Modular Reactors (SMRs)/Advanced Reactor  technologies (Fall 2022 - dates still to be confirmed),Specific,CDLM,YES
+25,Halden HTO project- Topic 4 on Human-Automation Collaboration: Human Performance in Operation of SMRs,Specific,CRPPH,YES
+26,To explore whether more dedicated work on SMRs/AMRs is required (e.g. adequacy of Emergency Preparedness and Response plan),Specific,CRPPH,YES
+27,The CRPPH/WPNEM will contribute to the Workshop on Floating NPPs (lead by NLC) scheduled to take place at the end of 2022/early 2023,Specific,CRPPH,YES
+28,WPLANS Programme of work for 2021-2022,Specific,NLC,YES
+29,Advance construction and nuclear costs aspects,Relevant,NDC,YES
+30,Digital transformation and nuclear costs aspects,Relevant,NDC,YES
+31,Seismic analysis and nuclear costs aspects,Relevant,NDC,YES
+32,High temperature reactors and cogeneration applications,Relevant,NDC,YES
+33,Nuclear Innovation 2050 and related activities,Specific,NDC,YES
+34,Streamlining the licensing process for SMRs,Specific,NDC,YES
+35,The front-end and back-end nuclear fuel cycle for SMRs,Specific,NDC,YES
+36,SMR sectoral studies,Specific,NDC,YES
+37,Financing for electricity systems,Relevant,NDC,YES
+38,"Role of nuclear in sector coupling (heat, hydrogen, mobility, desalination)",Relevant,NDC,YES
+39,Financial Support for Nuclear from multinational and national financial institutes,Relevant,NDC,YES
+40,Market design for electricity systems,Relevant,NDC,YES
+41,Efficient contractual arrangements for nuclear projects,Relevant,NDC,YES
+42,"System analysis of closing the nuclear fuel cycle
+",Relevant,NDC,YES
+43,"Reactor Physics Benchmarks
+Sodium Cooled Fast Reactors (SFRs)",Relevant,NSC,YES
+44,"Reactor Physics Benchmarks
+Molten Salt Reactors (MSRs)",Relevant,NSC,YES
+45,"Reactor Physics Benchmarks
+Lead Cooled Fast Reactors (LFRs)
+",Relevant,NSC,YES
+46,"Material Science and Advanced Fuel Cycles
+Properties of Advanced Fuels
+
+",Relevant,NSC,YES
+47,"Material Science and Advanced Fuel Cycles
+Thermodynamics of Advanced Fuel Systems, TAF-ID database
+
+",Relevant,NSC,YES
+48,"Material Science and Advanced Fuel Cycles
+Advanced Fuel Cycles
+
+",Relevant,NSC,YES
+49,"Training and Education
+
+NEA Nuclear Education, Skills and Technology (NEST) Framework - Small Modular Reactors (SMRs) Project
+",Relevant,NSC,YES
+50,CSNI Areas of Focus for SMRs support,Specific,CSNI,YES
+51,CSNI/WGFS activities of potential interest for SMRs,Relevant,CSNI,YES
+52,CSNI WGAMA activities of potential interest for SMRs,Relevant,CSNI,YES
+53,CSNI WGRISK activities of potential interest for SMRs,Relevant,CSNI,YES
+54,CSNI WGEV activities of potential interest for SMRs,Relevant,CSNI,YES
+55,"Contribution of the CRPPH/WPNEM to the Workshop on Floating NPPs (lead by NLC), end of 2022/early 2023)",Specific,CRPPH,YES
+56,Workshop on Floating NPPs,Specific,NLC,YES
+57,Next NLC meeting to be held in June 2022 or for the 2023-2024 Programme of work,Relevant,NLC,YES
+58,High temperature reactors and cogeneration applications,Relevant,NDC,YES
+59,Streamlining the licensing process for SMRs,Specific,NDC,YES
+60,The front-end and back-end nuclear fuel cycle for SMRs,Specific,NDC,YES
+61,SMR sectoral studies,Specific,NDC,YES
+62,Nuclear Innovation 2050 and related activities,Specific,NDC,YES
+63,Financial Support for Nuclear from multinational and national financial institutes,Relevant,NDC,YES
+64,"Reactor Physics Benchmarks
+Sodium Cooled Fast Reactors (SFRs)",Relevant,NSC,YES
+65,"Reactor Physics Benchmarks
+Molten Salt Reactors (MSRs)",Relevant,NSC,YES
+66,"Reactor Physics Benchmarks
+Lead Cooled Fast Reactors (LFRs)
+",Relevant,NSC,YES
+67,"Material Science and Advanced Fuel Cycles
+Properties of Advanced Fuels
+
+",Relevant,NSC,YES
+68,"Material Science and Advanced Fuel Cycles
+Thermodynamics of Advanced Fuel Systems, TAF-ID database
+
+",Relevant,NSC,YES
+69,"Material Science and Advanced Fuel Cycles
+Advanced Fuel Cycles
+
+",Relevant,NSC,YES
+70,"Training and Education
+
+NEA Nuclear Education, Skills and Technology (NEST) Framework - Small Modular Reactors (SMRs) Project
+",Relevant,NSC,YES

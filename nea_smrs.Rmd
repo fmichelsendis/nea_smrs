@@ -4,6 +4,7 @@ title: "Overview of SMR related activities"
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
@@ -12,30 +13,65 @@ library(data.table)
 library(DT)
 library(plotly)
 
-df<-fread("csv/nea_smrs2.csv", header = TRUE)%>%select(-TITLE, -DESCRIPTION)%>%
-pivot_longer(cols = c(7:35), names_to = "SCOPE", values_to = "FLAG")%>%
+df<-fread("csv/nea_smrs_v2.csv", header = TRUE)%>%
+  select(KEY, PROJECT, DELIVERABLE, DUE_DATE, 13:46)%>%
+  pivot_longer(cols = c(16:38), names_to = "TOPIC", values_to = "FLAG")%>%
   mutate(FLAG=toupper(FLAG),
-         SMR_FLAG=as.factor(SMR_FLAG))%>%
+         SMR=as.factor(SMR))%>%
   filter(FLAG=="YES")%>%
   select(-FLAG)
 
+df2<-df%>%
+  pivot_longer(cols = c(5:13), names_to = "COMMITTEE", values_to = "FLAG")%>%
+  mutate(FLAG=toupper(FLAG)
+         )%>%
+  filter(FLAG=="YES")
 
+#projects only
+df1<-df2%>%select(-TOPIC, -STATUS, -DUE_DATE, -DELIVERABLE, -FLAG)%>%unique()
+#write_csv(df1, 'csv/df1.csv')
+
+Nproject<-as.integer(dim(df1)[1])
+
+Ncommittees<-as.integer(dim(as.data.frame(unique(df1$COMMITTEE)))[1])
+                        
 ```
 
-# Histograms
+\vspace{2cm}
 
-```{r histo, echo=FALSE, fig.width=10, fight.height=70}
-g<-ggplot(df, aes(y=SMR_FLAG,  fill=SCOPE)) +
+# SMR projects per committee
+
+Total number of projects : `r Nproject` projects on `r Ncommittees` committees.
+
+```{r histo1, echo=FALSE, fig.width=10, fight.height=70}
+
+#df11<-fread("csv/df1.csv")
+g<-ggplot(df1, aes(y=SMR, fill=SMR)) +
   geom_bar(stat='count', position = "dodge") +
   theme(legend.position = "top") +
   theme_light() +
-  facet_wrap(vars(DIV)) +
+  facet_wrap(vars(COMMITTEE)) +
   xlab("")+
-  ylab("")+
-  ggtitle("Deliverables per scope and division")
-  #coord_flip()
+  ylab("") 
+ 
 
-#g
+ggplotly(g)
+ 
+
+```
+
+
+# SMR topics addressed per committee
+
+```{r histo2, echo=FALSE, fig.width=10, fight.height=70}
+g<-ggplot(df2, aes(y=SMR,  fill=TOPIC)) +
+  geom_bar(stat='count', position = "dodge") +
+  theme(legend.position = "top") +
+  theme_light() +
+  facet_wrap(vars(COMMITTEE)) +
+  xlab("")+
+  ylab("") 
+
 
 ggplotly(g)
  
@@ -50,7 +86,7 @@ ggplotly(g)
 ```{r data, echo=FALSE}
 
 
-DT::datatable(df)
+DT::datatable(df1)
 
 ```
 
