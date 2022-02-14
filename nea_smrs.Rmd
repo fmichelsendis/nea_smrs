@@ -29,10 +29,10 @@ g<-ggplot(df, aes(y=SMR_FLAG,  fill=SCOPE)) +
   geom_bar(stat='count', position = "dodge") +
   theme(legend.position = "top") +
   theme_light() +
-  facet_wrap(vars(DIV)) +
+  facet_wrap(vars(STC)) +
   xlab("")+
   ylab("")+
-  ggtitle("Deliverables per scope and division")
+  ggtitle("Topics per scope and committee")
   #coord_flip()
 
 #g
