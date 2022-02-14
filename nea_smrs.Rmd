@@ -100,6 +100,11 @@ g<-ggplot(df2, aes(y=SMR,  fill=TOPIC)) +
 
 ggplotly(g)
 
+```
+
+# SMR topics addressed per broad scope
+
+```{r bubbles2, echo=FALSE, fig.width=8, fight.height=35}
 
 dft<-fread("csv/topics_scopes.csv")%>%select(Scope, Count)
 
