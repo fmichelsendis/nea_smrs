@@ -1,6 +1,6 @@
 ---
 title: "Overview of SMR related activities" 
-#author: F. Michel-Sendis
+author: F. Michel-Sendis
 output: html_document
 ---
 
@@ -13,27 +13,31 @@ library(data.table)
 library(DT)
 library(plotly)
 
-df<-fread("csv/nea_smrs_v2.csv", header = TRUE)%>%
+topics<-fread('csv/topics.csv')%>%
+  mutate(
+    TOPIC= factor(TOPIC, levels=TOPIC),
+    TOPIC_CLASS= factor(TOPIC_CLASS, levels=c('TECH', 'FRAMEWORK', 'APPLICATION'))
+  )
+
+projects<-fread("csv/nea_smrs.csv", header = TRUE, na.strings=c("","NA"))%>%unique()
+Nproject<-as.integer(dim(projects)[1])
+
+df<-projects%>%
   select(KEY, PROJECT, DELIVERABLE, DUE_DATE, 13:46)%>%
-  pivot_longer(cols = c(16:38), names_to = "TOPIC", values_to = "FLAG")%>%
-  mutate(FLAG=toupper(FLAG),
-         SMR=as.factor(SMR))%>%
-  filter(FLAG=="YES")%>%
-  select(-FLAG)
-
-df2<-df%>%
-  pivot_longer(cols = c(5:13), names_to = "COMMITTEE", values_to = "FLAG")%>%
-  mutate(FLAG=toupper(FLAG)
+  pivot_longer(cols = c(16:38), names_to = "TOPIC", values_to = "TOPIC_FLAG")%>%
+  mutate(
+    TOPIC_FLAG=toupper(TOPIC_FLAG),
+    SMR_FLAG=factor(SMR, levels=c('Specific', 'Relevant')))%>%
+  merge(topics)%>%
+  pivot_longer(cols = c(6:14), names_to = "COMMITTEE", values_to = "COMMITTEE_FLAG")%>%
+  mutate(
+    COMMITTEE_FLAG=toupper(COMMITTEE_FLAG)
          )%>%
-  filter(FLAG=="YES")
+  filter(TOPIC_FLAG=="YES" & COMMITTEE_FLAG=="YES" )%>%
+  select(KEY,PROJECT,DELIVERABLE,DUE_DATE,STATUS,SMR_FLAG,
+        TOPIC, TOPIC_CLASS, COMMITTEE, -TOPIC_FLAG,-COMMITTEE_FLAG) 
 
-#projects only
-df1<-df2%>%select(-TOPIC, -STATUS, -DUE_DATE, -DELIVERABLE, -FLAG)%>%unique()
-#write_csv(df1, 'csv/df1.csv')
-
-Nproject<-as.integer(dim(df1)[1])
-
-Ncommittees<-as.integer(dim(as.data.frame(unique(df1$COMMITTEE)))[1])
+Ncommittees<-as.integer(dim(as.data.frame(unique(df$COMMITTEE)))[1])
                         
 ```
 
@@ -49,7 +53,7 @@ Specific projects related to SMRS are found in 6 committees :
 library(packcircles)
 
 #df11<-fread("csv/df1.csv")
-g<-ggplot(df1, aes(y=SMR, fill=SMR)) +
+g<-ggplot(df, aes(y=SMR_FLAG, fill=SMR_FLAG)) +
   geom_bar(stat='count', position = "dodge") +
   theme(legend.position = "top") +
   theme_light() +
@@ -60,12 +64,12 @@ g<-ggplot(df1, aes(y=SMR, fill=SMR)) +
  
 
 
-df_b<-df1%>%select(KEY, SMR, COMMITTEE)%>%
-  group_by(COMMITTEE, SMR)%>%
-  count(COMMITTEE, SMR)
+df_b<-df%>%select(KEY, SMR_FLAG, COMMITTEE)%>%
+  group_by(COMMITTEE, SMR_FLAG)%>%
+  count(COMMITTEE, SMR_FLAG)
 
-df_b_s<-df_b%>%filter(SMR=='Specific')
-df_b_r<-df_b%>%filter(SMR=='Relevant')
+df_b_s<-df_b%>%filter(SMR_FLAG=='Specific')
+df_b_r<-df_b%>%filter(SMR_FLAG=='Relevant')
 
 packing <- circleProgressiveLayout(df_b_s$n, sizetype='area')
 dat.gg <- circleLayoutVertices(packing, npoints=50)
@@ -86,11 +90,25 @@ g
 
 ```
 
+# SMR Projects per Topic and Committee
+
+```{r scatter3, echo=FALSE, fig.width=10, fight.height=70}
+
+g<-ggplot(df, aes(y=COMMITTEE, fill=TOPIC))+
+  geom_bar(stat='count' )+
+  facet_wrap(vars(TOPIC_CLASS))
+
+g
+```
+
+
+
+
 
 # SMR topics addressed per committee
 
 ```{r histo2, echo=FALSE, fig.width=10, fight.height=70}
-g<-ggplot(df2, aes(y=SMR,  fill=TOPIC)) +
+g<-ggplot(df, aes(y=SMR_FLAG,  fill=TOPIC)) +
   geom_bar(stat='count', position = "dodge") +
   theme(legend.position = "top") +
   theme_light() + 
@@ -102,38 +120,14 @@ ggplotly(g)
 
 ```
 
-# SMR topics addressed per broad scope
-
-```{r bubbles2, echo=FALSE, fig.width=8, fight.height=35}
-
-dft<-fread("csv/topics_scopes.csv")%>%select(Scope, Count)
-
-packing <- circleProgressiveLayout(dft$Count, sizetype='area')
-dat.gg <- circleLayoutVertices(packing, npoints=50)
-data<-cbind(dft, packing)
-
-g<-ggplot() + 
-  geom_polygon(data = dat.gg, aes(x, y, group = id, fill=as.factor(id)), colour = "black", alpha = 0.6) +
-  geom_text(data = data, aes(x, y, label = Scope))+
-  scale_size_continuous(range = c(1,4)) +
-  theme_void() + 
-  theme(legend.position="none") +
-  coord_equal()
-
-g
-
-
-```
-
  
-
 
 # Table
 
 ```{r data, echo=FALSE}
 
 
-DT::datatable(df1)
+DT::datatable(df)
 
 ```
 
